@@ -3,6 +3,14 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:1e1711c52cb4f4939ea4180d825b42dbbf6057b7aa78cab509d3434086eea598"
+  name = "github.com/9elements/txt-suite"
+  packages = ["pkg/api"]
+  pruneopts = "NUT"
+  revision = "0086927e7d27c88e36e1b6c0c2cb3dc302357c09"
+
+[[projects]]
+  branch = "master"
   digest = "1:f3793f8a708522400cef1dba23385e901aede5519f68971fd69938ef330b07a1"
   name = "github.com/alecthomas/template"
   packages = [
@@ -67,6 +75,14 @@
   pruneopts = "NUT"
   revision = "9f541cc9db5d55bce703bd99987c9d5cb8eea45e"
   version = "v1.0.0"
+
+[[projects]]
+  digest = "1:ef1d5abedbaa92ba898a4c6fd47baf2c689ae33d65b890fea704bea9f4ed5e2e"
+  name = "github.com/fearful-symmetry/gomsr"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "be352f4f0713931b4735174c2e7c8c685dee97bd"
+  version = "v0.0.1"
 
 [[projects]]
   digest = "1:e8301df5b11c8c13927a26a88ee7ec65410024f75c0fc3c8e6421aa6833808ac"
@@ -345,14 +361,16 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:a342b35551fa09b905a09cc3964bcfca537292ea5cc8993de0e02c9ed12a49a7"
+  digest = "1:9b36d9b53eed36867acc466b4516e342d81ea67c9cec86d21ca6a93c3aba0fbd"
   name = "golang.org/x/net"
   packages = [
     "bpf",
+    "idna",
     "internal/iana",
     "internal/socket",
     "ipv4",
     "ipv6",
+    "publicsuffix",
   ]
   pruneopts = "NUT"
   revision = "e086a090c8fdb9982880f0fb6e3db47af1856533"
@@ -370,15 +388,25 @@
   revision = "1957bb5e6d1f523308b49060df02171d06ddfc77"
 
 [[projects]]
-  digest = "1:1093f2eb4b344996604f7d8b29a16c5b22ab9e1b25652140d3fede39f640d5cd"
+  digest = "1:8d8faad6b12a3a4c819a3f9618cb6ee1fa1cfc33253abeeea8b55336721e3405"
   name = "golang.org/x/text"
   packages = [
+    "collate",
+    "collate/build",
+    "internal/colltab",
     "internal/gen",
+    "internal/language",
+    "internal/language/compact",
+    "internal/tag",
     "internal/triegen",
     "internal/ucd",
+    "language",
+    "secure/bidirule",
     "transform",
+    "unicode/bidi",
     "unicode/cldr",
     "unicode/norm",
+    "unicode/rangetable",
   ]
   pruneopts = "NUT"
   revision = "342b2e1fbaa52c93f31447ad2c6abc048c63e475"
@@ -431,6 +459,14 @@
   version = "v2.2.6"
 
 [[projects]]
+  digest = "1:0942599d1f614d9ca4dfe052db1f60d4547b1b581206006be352f629a8b37d8d"
+  name = "gopkg.in/resty.v1"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "fa5875c0caa5c260ab78acec5a244215a730247f"
+  version = "v1.12.0"
+
+[[projects]]
   digest = "1:d9b9ac6943a512737f76bf3d61b08d97121c66686bc02ffc231313563230b468"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
@@ -453,6 +489,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/9elements/txt-suite/pkg/api",
     "github.com/beevik/ntp",
     "github.com/cenkalti/backoff",
     "github.com/davecgh/go-spew/spew",
